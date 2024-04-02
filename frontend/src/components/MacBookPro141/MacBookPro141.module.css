@@ -1,12 +1,16 @@
-.root {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: #fff;
-  overflow: hidden;
+:host,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
+
 .heritage {
   color: #000;
   font-size: 40px;
@@ -226,6 +230,8 @@
 }
 .group1 {
   position: absolute;
+  bottom: 0;
+  width: 100%;
   left: 1371px;
   top: 840px;
   width: 121px;
@@ -315,4 +321,77 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+.infoBox {
+  border: 1px solid #ccc; /* Example border */
+  padding: 20px; /* Example padding */
+  margin-top: 10px; /* Example margin */
+  background-color: #f9f9f9; /* Example background color */
+}
+
+.collapsible .content {
+  padding: 6px;
+  background-color: rgb(240, 240, 240);
+  font-size: 14px;
+}
+
+.collapsible .header {
+  background-color: rgb(200, 200, 200);
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid rgb(220, 220, 220);
+}
+
+.collapsible .header .title {
+  font-weight: 400;
+}
+
+.preferences label {
+  display: block;
+  padding-bottom: 4px;
+}
+.rectangle1 {
+  position: absolute;
+  left: 313px;
+  top: 101px;
+  width: 443px;
+  height: 338px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  background-color: #dad5d2;
+}
+.howItWorksResourcesHeritageWik {
+  position: absolute;
+  left: 348px;
+  top: 121px;
+  width: 392px;
+  height: 299px;
+  justify-content: center;
+  flex-direction: column;
+}
+.textBlock {
+  color: #1f1b1b;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock2 {
+  margin-top: 60px;
+  margin-bottom: 34px;
+  color: #1f1b1b;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock3 {
+  margin-top: 32px;
+  color: #1f1b1b;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
 }
