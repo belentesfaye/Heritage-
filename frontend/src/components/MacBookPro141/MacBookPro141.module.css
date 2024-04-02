@@ -364,12 +364,15 @@
 }
 .howItWorksResourcesHeritageWik {
   position: absolute;
-  left: 348px;
-  top: 121px;
+  left: 313px;
+  top: 101px;
   width: 392px;
   height: 299px;
   justify-content: center;
   flex-direction: column;
+  outline: solid 1px #000;
+  background-color: #dad5d2;
+
 }
 .textBlock {
   color: #1f1b1b;
@@ -389,6 +392,36 @@
 }
 .textBlock3 {
   margin-top: 32px;
+  color: #1f1b1b;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.aboutBox {
+  position: absolute;
+  left: 471px;
+  top: 101px;
+  width: 392px;
+  height: 259px;
+  justify-content: center;
+  flex-direction: column;
+  outline: solid 1px #000;
+  background-color: #dad5d2;
+
+}
+
+.textBlockHistory {
+  color: #1f1b1b;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlockPrivacy {
+  margin-top: 60px;
+  margin-bottom: 34px;
   color: #1f1b1b;
   font-size: 32px;
   font-weight: bold;
