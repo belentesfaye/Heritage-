@@ -1,9 +1,10 @@
 import React, { CSSProperties, memo, useState } from 'react';
 import type { FC, JSXElementConstructor, ReactElement, ReactNode, ReactPortal } from 'react';
-
+import { Formik, Field, Form, ErrorMessage } from 'formik';
 import resets from '../_resets.module.css';
 import { Group1Icon } from './Group1Icon';
 import classes from './MacBookPro141.module.css';
+import styles from './MacBookPro141.module.css';
 import { Link } from 'react-router-dom';
 import { useCollapse } from 'react-collapsed';
 import {
@@ -30,6 +31,7 @@ import {
   ToastId,
   Tr,
   useToast,
+  Image,
 } from '@chakra-ui/react';
 
 interface Props {
@@ -43,66 +45,27 @@ interface SectionProps {
 }
 
 
-function Section(props: SectionProps) {
-  const config = {
-    defaultExpanded: props.defaultExpanded || false,
-    collapsedHeight: props.collapsedHeight || 0,
-  };
-  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse(config);
-
-  return (
-  <div className="collapsible">
-      <div className="header" {...getToggleProps()}>
-          <div className="title">{props.title}</div>
-          <div className="icon">
-              <i className={'fas fa-chevron-circle-' + (isExpanded ? 'up' : 'down')}></i>
-          </div>
-      </div>
-      <div {...getCollapseProps()}>
-          <div className="content">
-              {props.children}
-          </div>
-      </div>
-  </div>
-  );
-}
-const accountInfo = {
-  accountInfo: (
-    <div>
-      <Heading as='h3' size='md'>
-        {showLogin ? 'Login' : 'Sign Up'}
-      </Heading>
-      <FormControl>
-        <FormLabel htmlFor='name'>Username</FormLabel>
-        <Input
-          autoFocus
-          name='name'
-          placeholder='Your username'
-          value={userName}
-          onChange={event => setUserName(event.target.value)}
-        />
-      </FormControl>
-      <FormControl marginTop={4}>
-        <FormLabel htmlFor='password'>Password</FormLabel>
-        <Input
-          autoFocus
-          name='password'
-          placeholder='Your password'
-          value={password}
-          onChange={event => setPassword(event.target.value)}
-        />
-      </FormControl>
-    </div>
-  ),
-};
-
-
 /* @figmaId 1:3 */
 export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) {
   const [isInfoBoxVisible, setInfoBoxVisible] = useState(false);
   const toggleInfoBox = () => setInfoBoxVisible(!isInfoBoxVisible);
   const [isAboutVisible, setAboutVisible] = useState(false);
   const toggleAbout = () => setAboutVisible(!isAboutVisible);
+  const [isSignInVisible, setSignInVisible] = useState(false);
+  const toggleSignIn = () => setSignInVisible(!isSignInVisible);
+  const handleLogin = (e: { preventDefault: () => void; }) => {
+    e.preventDefault(); // Prevent form submission
+    // Implement your login logic here
+
+    // Example: Displaying a toast on login attempt
+    toast({
+      title: "Attempting login...",
+      description: "We've received your login information.",
+      status: "info",
+      duration: 5000,
+      isClosable: true,
+    });
+  };
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
         {isInfoBoxVisible && (
@@ -125,9 +88,8 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
       <div className={classes.line3}></div>
   
       <div className={classes.learn}>Learn</div>
-      <Link to="/sign-in" style={{ textDecoration: 'none' }}> 
       <div className={classes.signIn}>Sign In</div>
-      </Link>
+      <div className={classes.signIn} onClick={toggleSignIn}></div>
       <div className={classes.help}>Help</div>
       <div className={classes.expandArrow2} onClick={toggleInfoBox}></div>
       <div className={classes.stories}>Stories </div>
@@ -160,6 +122,66 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
             <div className={classes.textBlock3}>Privacy</div>
           </div>
         )}
+{isSignInVisible && (
+  <Box sx={{
+    position: 'absolute',
+    left: '50%',
+    top: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: '770px',
+    height: '701px',
+    outline: 'solid 1px #000',
+    outlineOffset: '-1px',
+    backgroundColor: '#e8e8e8',
+    filter: 'blur(2px)',
+    textAlign: 'center',
+  }}>
+    <form onSubmit={handleLogin}>
+      <Box sx={{
+        display: 'inline-block',
+        marginTop: '100px', // Adjust as needed
+      }}>
+        <Box sx={{
+          color: '#999898',
+          fontSize: '36px',
+          fontWeight: 'bold',
+          fontFamily: 'Gowun Batang, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif',
+          marginBottom: '20px',
+        }}>
+          <FormControl id="username" isRequired>
+            <FormLabel>Username</FormLabel>
+            <Input type="text" />
+          </FormControl>
+        </Box>
+
+        <Box sx={{
+          color: '#999898',
+          fontSize: '36px',
+          fontWeight: 'bold',
+          fontFamily: 'Gowun Batang, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif',
+        }}>
+          <FormControl id="password" isRequired>
+            <FormLabel>Password</FormLabel>
+            <Input type="password" />
+          </FormControl>
+        </Box>
+
+        <Button type="submit" colorScheme="teal" style={{ display: 'block', width: '100%', marginTop: '20px' }}>
+          Sign In
+        </Button>
+      </Box>
+    </form>
+  </Box>
+)}
+
+
+
+        
+
     </div>
   );
 });
+function toast(arg0: { title: string; description: string; status: string; duration: number; isClosable: boolean; }) {
+  throw new Error('Function not implemented.');
+}
+

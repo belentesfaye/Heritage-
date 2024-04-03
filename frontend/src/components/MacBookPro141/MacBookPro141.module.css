@@ -428,3 +428,255 @@
   font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
 }
+
+.loginContainer {
+  /* Styles that apply to the login container */
+  width: 359px;
+  height: 290px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.signUpContainer {
+  position: absolute;
+  left: 341px;
+  top: 122px;
+  width: 770px;
+  height: 701px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  background-color: #e8e8e8;
+  filter: blur(2px);
+}
+
+
+.loginInput {
+  /* Styles for the input fields */
+}
+
+.loginButton {
+  /* Styles for the login button */
+  width: 302px;
+  height: 39px;
+  outline: solid 1px #0aa8c2;
+  outline-offset: -1px;
+  border-radius: 5px;
+  background-color: #0aa8c2;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+
+.errorMessage {
+  color: red;
+  /* Other styles for the error message */
+}
+
+.userNameContainer {
+  /* Styles for the username container */
+  position: absolute;
+  left: 455px;
+  top: 276.5px;
+  width: 558.5px;
+  height: 78px;
+  overflow: visible;
+  filter: drop-shadow(0px 4px 4px #00000040);
+}
+.passwordContainer {
+  /* Styles for the password container */
+  position: absolute;
+  left: 455px;
+  top: 711px;
+  width: 558.5px;
+  height: 78px;
+  overflow: visible;
+  filter: drop-shadow(0px 4px 4px #00000040);
+}
+
+.emailContainer {
+  /* Styles for the email container */
+  width: 302px;
+  height: 42px;
+  outline: solid 1px #100c0c;
+  outline-offset: -1px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.passwordview {
+  /* Styles for the password view */
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  background-image:/* webpackIgnore: true */ url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-eye-512.png');
+  border-radius: 0px 5px 5px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.loginerrorContainer {
+  /* Styles for the login error container */
+width: 302px;
+height: 42px;
+outline: solid 1px #f2b1b8;
+outline-offset: -1px;
+border-radius: 5px;
+background-color: #fadde0;
+box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.loginText { 
+  /* Styles for the login text */
+  color: #000;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+  /* use for the sign up text as well */
+}
+.username {
+  color: #999898;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 491px;
+  top: 296px;
+  width: 235px;
+  height: 40px;
+  justify-content: center;
+  flex-direction: column;
+}
+.password {
+  color: #999898;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 491px;
+  top: 399px;
+  width: 235px;
+  height: 40px;
+  justify-content: center;
+  flex-direction: column;
+}
+.signInGoogle {
+  color: #999898;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 622px;
+  top: 730px;
+  width: 353px;
+  height: 40px;
+  justify-content: center;
+  flex-direction: column;
+}
+.resetPassword {
+  color: #000;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  position: absolute;
+  left: 633px;
+  top: 599px;
+  width: 240px;
+  height: 36px;
+  justify-content: center;
+  flex-direction: column;
+}
+.google {
+  position: absolute;
+  left: 499px;
+  top: 712px;
+  width: 78px;
+  height: 78px;
+  background-image: url('../../../public/assets/google.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+} .passwordbox {
+  position: absolute;
+  left: 455px;
+  top: 389px;
+  width: 558.5px;
+  height: 78px;
+  overflow: visible;
+  filter: drop-shadow(0px 4px 4px #00000040);
+} .username {
+  position: absolute;
+  left: 455px;
+  top: 276.5px;
+  width: 558.5px;
+  height: 78px;
+  overflow: visible;
+  filter: drop-shadow(0px 4px 4px #00000040);
+} .signInBox {
+  position: absolute;
+  left: 499px;
+  top: 501px;
+  width: 469px;
+  height: 73px;
+  overflow: visible;
+} .signINusingGoogle {
+  position: absolute;
+  left: 455px;
+  top: 711px;
+  width: 558.5px;
+  height: 78px;
+  overflow: visible;
+  filter: drop-shadow(0px 4px 4px #00000040);
+} .signInGoogle {
+  color: #999898;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 622px;
+  top: 730px;
+  width: 353px;
+  height: 40px;
+  justify-content: center;
+  flex-direction: column;
+}.google {
+  position: absolute;
+  left: 499px;
+  top: 712px;
+  width: 78px;
+  height: 78px;
+  background-image: url('../../../public/assets/google.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* .signIn {
+  color: #000;
+  font-size: 64px;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 405px;
+  top: 176px;
+  width: 228px;
+  height: 39px;
+  justify-content: center;
+  flex-direction: column;
+} */
