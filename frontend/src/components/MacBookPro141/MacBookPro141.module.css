@@ -135,6 +135,20 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.signInPage {
+  color: #000;
+  font-size: 64px;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 405px;
+  top: 176px;
+  width: 228px;
+  height: 39px;
+  justify-content: center;
+  flex-direction: column;
+}
 .help {
   color: #000;
   font-size: 28px;
@@ -239,6 +253,18 @@
   overflow: visible;
 }
 .icon {
+  width: 100%;
+  height: 100%;
+}
+.icon2 {
+  width: 100%;
+  height: 100%;
+}
+.icon3 {
+  width: 100%;
+  height: 100%;
+}
+.icon4 {
   width: 100%;
   height: 100%;
 }
@@ -476,6 +502,7 @@
 .userNameContainer {
   /* Styles for the username container */
   position: absolute;
+  color:#000;
   left: 455px;
   top: 276.5px;
   width: 558.5px;
@@ -552,24 +579,10 @@ box-shadow: 0px 4px 4px 0px #00000040;
   font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   position: absolute;
-  left: 491px;
-  top: 296px;
-  width: 235px;
-  height: 40px;
-  justify-content: center;
-  flex-direction: column;
-}
-.password {
-  color: #999898;
-  font-size: 36px;
-  font-weight: bold;
-  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 491px;
-  top: 399px;
-  width: 235px;
-  height: 40px;
+  left: 455px;
+  top: 276.5px;
+  width: 558.5px;
+  height: 78px;
   justify-content: center;
   flex-direction: column;
 }
@@ -580,12 +593,33 @@ box-shadow: 0px 4px 4px 0px #00000040;
   font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   position: absolute;
-  left: 622px;
-  top: 730px;
+  left: 250px;
+  top: 610px;
   width: 353px;
   height: 40px;
   justify-content: center;
   flex-direction: column;
+}
+.google {
+  position: absolute;
+  left: 150px;
+  top: 590px;
+  width: 78px;
+  height: 78px;
+  background-image: url('../../../public/assets/google.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.rectangle5 {
+  background-color: #ffffff;
+  position: absolute;
+  left: 100px;
+  top: 590px;
+  width: 558.5px;
+  height: 78px;
+  overflow: visible;
+  filter: drop-shadow(0px 4px 4px #00000040);
 }
 .resetPassword {
   color: #000;
@@ -595,40 +629,46 @@ box-shadow: 0px 4px 4px 0px #00000040;
     'Liberation Sans', sans-serif;
   text-decoration: underline;
   position: absolute;
-  left: 633px;
-  top: 599px;
+  left: 260px;
+  top: 450px;
   width: 240px;
   height: 36px;
   justify-content: center;
   flex-direction: column;
 }
-.google {
+.passwordbox {
+  background-color: #ffffff;
   position: absolute;
-  left: 499px;
-  top: 712px;
-  width: 78px;
-  height: 78px;
-  background-image: url('../../../public/assets/google.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-} .passwordbox {
-  position: absolute;
-  left: 455px;
-  top: 389px;
+  left: 100px;
+  top: 200px;
   width: 558.5px;
   height: 78px;
   overflow: visible;
   filter: drop-shadow(0px 4px 4px #00000040);
 } .username {
   position: absolute;
-  left: 455px;
-  top: 276.5px;
+  left: 120px;
+  top: 100px;
   width: 558.5px;
   height: 78px;
   overflow: visible;
   filter: drop-shadow(0px 4px 4px #00000040);
-} .signInBox {
+} 
+.password {
+  color: #999898;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 120px;
+  top: 200px;
+  width: 558.5px;
+  height: 78px;
+  justify-content: center;
+  flex-direction: column;
+}
+.signInBox {
   position: absolute;
   left: 499px;
   top: 501px;
@@ -643,31 +683,8 @@ box-shadow: 0px 4px 4px 0px #00000040;
   height: 78px;
   overflow: visible;
   filter: drop-shadow(0px 4px 4px #00000040);
-} .signInGoogle {
-  color: #999898;
-  font-size: 36px;
-  font-weight: bold;
-  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 622px;
-  top: 730px;
-  width: 353px;
-  height: 40px;
-  justify-content: center;
-  flex-direction: column;
-}.google {
-  position: absolute;
-  left: 499px;
-  top: 712px;
-  width: 78px;
-  height: 78px;
-  background-image: url('../../../public/assets/google.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-/* .signIn {
+} 
+.signInText {
   color: #000;
   font-size: 64px;
   font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
@@ -679,4 +696,104 @@ box-shadow: 0px 4px 4px 0px #00000040;
   height: 39px;
   justify-content: center;
   flex-direction: column;
-} */
+}
+
+.signIn3 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 715px;
+  top: 580px;
+  width: 131px;
+  height: 46px;
+  justify-content: center;
+  flex-direction: column;
+}
+.rectangle2 {
+  position: absolute;
+  left: 341px;
+  top: 122px;
+  width: 770px;
+  height: 701px;
+  justify-content: center;
+  flex-direction: column;
+  outline-offset: -1px;
+  background-color: #e8e8e8;
+  filter: drop-shadow(0px 4px 4px #00000040);
+
+
+  /*
+    position: absolute;
+  left: 471px;
+  top: 101px;
+  width: 392px;
+  height: 259px;
+  justify-content: center;
+  flex-direction: column;
+  outline: solid 1px #000;
+  background-color: #dad5d2;
+  */
+}
+.rectangle3 {
+  background-color: #ffffff;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  width: 558.5px;
+  height: 78px;
+  overflow: visible;
+  filter: drop-shadow(0px 4px 4px #00000040);
+}
+.rectangle4 {
+  position: absolute;
+  left: 455px;
+  top: 389px;
+  width: 558.5px;
+  height: 78px;
+  overflow: visible;
+  filter: drop-shadow(0px 4px 4px #00000040);
+}
+.line4 {
+  position: absolute;
+  left: 150px;
+  top: 550px;
+  width: 559px;
+  max-width: 100%;
+  height: 0;
+  max-height: 100%;
+  border-bottom: solid 1px #000;
+}
+.signIn2 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 150x;
+  top: 360px;
+  width: 131px;
+  height: 46px;
+  justify-content: center;
+  flex-direction: column;
+}
+.centerContent {
+  /* Center horizontally and vertically */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;
+  justify-content: center;
+}
+.rectangle6 {
+  background-color: #1b5021;
+  position: absolute;
+  left: 150px;
+  top: 350px;
+  width: 469px;
+  height: 73px;
+  overflow: visible;
+  filter: drop-shadow(0px 4px 4px #00000040);
+}

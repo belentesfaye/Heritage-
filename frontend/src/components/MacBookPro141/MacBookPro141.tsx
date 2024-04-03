@@ -53,19 +53,6 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
   const toggleAbout = () => setAboutVisible(!isAboutVisible);
   const [isSignInVisible, setSignInVisible] = useState(false);
   const toggleSignIn = () => setSignInVisible(!isSignInVisible);
-  const handleLogin = (e: { preventDefault: () => void; }) => {
-    e.preventDefault(); // Prevent form submission
-    // Implement your login logic here
-
-    // Example: Displaying a toast on login attempt
-    toast({
-      title: "Attempting login...",
-      description: "We've received your login information.",
-      status: "info",
-      duration: 5000,
-      isClosable: true,
-    });
-  };
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
         {isInfoBoxVisible && (
@@ -121,64 +108,27 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
             <div className={classes.textBlock2}>Our History</div>
             <div className={classes.textBlock3}>Privacy</div>
           </div>
+        )} 
+      {isSignInVisible && (
+          <div className={`${resets.clapyResets} ${classes.root}`}>
+          <div className={classes.rectangle2}>
+          <div className={classes.centerContent}>
+          <div className={classes.line4}></div>
+          <div className={classes.rectangle5}></div>
+          <div className={classes.rectangle3}></div>
+          <div className={classes.rectangle6}></div>
+          <div className={classes.passwordbox}></div>
+          <div className={classes.username}>Username</div>
+          <div className={classes.password}>Password</div>
+          <div className={classes.signIn2}>Sign In</div>
+          <div className={classes.signInGoogle}>Sign in Google</div>
+          <div className={classes.resetPassword}>Reset Password</div>
+          <div className={classes.google}></div>
+          </div>
+        </div>
+        </div>
         )}
-{isSignInVisible && (
-  <Box sx={{
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: '770px',
-    height: '701px',
-    outline: 'solid 1px #000',
-    outlineOffset: '-1px',
-    backgroundColor: '#e8e8e8',
-    filter: 'blur(2px)',
-    textAlign: 'center',
-  }}>
-    <form onSubmit={handleLogin}>
-      <Box sx={{
-        display: 'inline-block',
-        marginTop: '100px', // Adjust as needed
-      }}>
-        <Box sx={{
-          color: '#999898',
-          fontSize: '36px',
-          fontWeight: 'bold',
-          fontFamily: 'Gowun Batang, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif',
-          marginBottom: '20px',
-        }}>
-          <FormControl id="username" isRequired>
-            <FormLabel>Username</FormLabel>
-            <Input type="text" />
-          </FormControl>
-        </Box>
-
-        <Box sx={{
-          color: '#999898',
-          fontSize: '36px',
-          fontWeight: 'bold',
-          fontFamily: 'Gowun Batang, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif',
-        }}>
-          <FormControl id="password" isRequired>
-            <FormLabel>Password</FormLabel>
-            <Input type="password" />
-          </FormControl>
-        </Box>
-
-        <Button type="submit" colorScheme="teal" style={{ display: 'block', width: '100%', marginTop: '20px' }}>
-          Sign In
-        </Button>
-      </Box>
-    </form>
-  </Box>
-)}
-
-
-
-        
-
-    </div>
+      </div>
   );
 });
 function toast(arg0: { title: string; description: string; status: string; duration: number; isClosable: boolean; }) {
