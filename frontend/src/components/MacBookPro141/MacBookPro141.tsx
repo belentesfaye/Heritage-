@@ -4,47 +4,11 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import resets from '../_resets.module.css';
 import { Group1Icon } from './Group1Icon';
 import classes from './MacBookPro141.module.css';
-import styles from './MacBookPro141.module.css';
-import { Link } from 'react-router-dom';
-import { useCollapse } from 'react-collapsed';
-import {
-  Box,
-  Button,
-  Checkbox,
-  Flex,
-  FormControl,
-  FormLabel,
-  Heading,
-  Input,
-  Stack,
-  Tab,
-  Table,
-  TableCaption,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
-  Tbody,
-  Td,
-  Th,
-  Thead,
-  ToastId,
-  Tr,
-  useToast,
-  Image,
-} from '@chakra-ui/react';
+
 
 interface Props {
   className?: string;
 }
-interface SectionProps {
-  title: string;
-  defaultExpanded?: boolean;
-  collapsedHeight?: number;
-  children: React.ReactNode; // This type is appropriate for anything that can be rendered: numbers, strings, elements, or an array containing these types.
-}
-
-
 /* @figmaId 1:3 */
 export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) {
   const [isInfoBoxVisible, setInfoBoxVisible] = useState(false);
@@ -131,7 +95,4 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
       </div>
   );
 });
-function toast(arg0: { title: string; description: string; status: string; duration: number; isClosable: boolean; }) {
-  throw new Error('Function not implemented.');
-}
 
