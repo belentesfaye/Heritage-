@@ -1,221 +1,161 @@
 .root {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  flex-direction: column;
-  align-items: flex-start;
   background-color: #fff;
   overflow: hidden;
-}
-.heritage {
-  color: #000;
-  font-size: 40px;
-  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 125px;
-  top: 32px;
-  width: 148px;
-  height: 39px;
-  justify-content: center;
-  flex-direction: column;
-}
-.about {
-  color: #000;
+  font-family: "Gowun Batang", serif;
   font-size: 28px;
-  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 473px;
-  top: 36px;
-  width: 92px;
-  height: 30px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Handles the navigation bar at the top of the page - includes logo, Heritage, Learn, About, Search, Sign in, and Help. */
+.topNav {
+  height: 100px;
+  display: flex;
+  position: fixed;
+  background-color: white;
+  z-index: 9999;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
+  box-shadow: 0px 23px 0px -22px black;
+}
+
+.rightNav {
+  display: flex;
+  margin-left: auto;
+}
+
+.navItem {
+  padding: 10px;
+}
+
+.subNav {
+  left: 0;
+  top: 100px;
+  position: fixed;
+  width: 100%;
   justify-content: center;
-  flex-direction: column;
+  box-shadow: 0px 23px 0px -22px black;
 }
-.frame1 {
-  position: absolute;
-  left: 1019px;
-  top: 12px;
-  width: 100px;
-  height: 100px;
-  flex-direction: column;
-  align-items: flex-start;
-  overflow: hidden;
+
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  justify-content: left;
+  padding-left: 10px;
+  border-top: 1px solid black;
 }
-.frame2 {
-  position: absolute;
-  left: -6px;
-  top: -17px;
-  width: 100px;
-  height: 100px;
-  flex-direction: column;
-  align-items: flex-start;
-  overflow: hidden;
+
+.chichenItza {
+  max-width: 20%;
+  background-image:/* webpackIgnore: true */ url('assets/chichenItza.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 30px;
+  margin-left: 50px;
 }
+
+.heritage {
+  font-size: 40px;
+  padding: 23px 15px 25px 15px;
+}
+
+.xboxR {
+  background-image:/* webpackIgnore: true */ url('assets/xboxR.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: flex;
+  width: 15px;
+  -ms-transform: translateY(-35%);
+  transform: translateY(-35%);
+}
+
+.learn {
+  font-weight: bold;
+  padding: 35px 25px;
+}
+
+.expandArrow {
+  position: flex;
+  background-image:/* webpackIgnore: true */ url('assets/expandArrow.png');
+  background-position: center;
+  margin: 0px 10px;
+  padding: 10px;
+  -ms-transform: translateY(-15%);
+  transform: translateY(-15%);
+}
+
+.about {
+  font-weight: bold;
+  padding: 35px 25px;
+}
+
+.expandArrow2 {
+  position: flex;
+  background-image:/* webpackIgnore: true */ url('assets/expandArrow2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0px 10px;
+  padding: 10px;
+  -ms-transform: translateY(-15%);
+  transform: translateY(-15%);
+}
+
 .search {
-  position: absolute;
-  left: 22px;
-  top: 32px;
-  width: 56px;
-  height: 37px;
   background-image:/* webpackIgnore: true */ url('assets/search.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  padding: 15px;
 }
-.line1 {
-  position: absolute;
-  left: 39px;
-  top: 100px;
-  width: 1435.0013px;
-  max-width: 100%;
-  height: 0;
-  max-height: 100%;
-  border-bottom: solid 1px #000;
-}
-.line2 {
-  position: absolute;
-  left: 39px;
-  top: 186px;
-  width: 1435.0013px;
-  max-width: 100%;
-  height: 0;
-  max-height: 100%;
-  border-bottom: solid 1px #000;
-}
-.line3 {
-  position: absolute;
-  left: 39px;
-  top: 900px;
-  width: 1435.0013px;
-  max-width: 100%;
-  height: 0;
-  max-height: 100%;
-  border-bottom: solid 1px #000;
-}
-.expandArrow {
-  position: absolute;
-  left: 551px;
-  top: 41px;
-  width: 28px;
-  height: 19px;
-  background-image:/* webpackIgnore: true */ url('assets/expandArrow.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.learn {
-  color: #000;
-  font-size: 28px;
-  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 321px;
-  top: 36px;
-  width: 78px;
-  height: 30px;
-  justify-content: center;
-  flex-direction: column;
-}
+
 .signIn {
-  color: #000;
-  font-size: 28px;
-  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 1150px;
-  top: 32px;
-  width: 141px;
-  height: 28px;
+  font-weight: bold;
   justify-content: center;
   flex-direction: column;
+  padding: 0px 25px;
 }
+
 .help {
-  color: #000;
-  font-size: 28px;
-  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 1323px;
-  top: 32px;
-  width: 141px;
-  height: 28px;
+  font-weight: bold;
   justify-content: center;
   flex-direction: column;
+  margin-right: 50px;
+  padding: 0px 15px;
 }
-.expandArrow2 {
-  position: absolute;
-  left: 399px;
-  top: 42px;
-  width: 26px;
-  height: 19px;
-  background-image:/* webpackIgnore: true */ url('assets/expandArrow2.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.stories {
-  color: #000;
-  font-size: 28px;
-  font-weight: bold;
-  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 870px;
-  top: 123px;
-  width: min-content;
-  height: min-content;
-  white-space: nowrap;
-  flex-direction: column;
-}
-.cultures {
-  color: #000;
-  font-size: 28px;
-  font-weight: bold;
-  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 719px;
-  top: 123px;
-  width: min-content;
-  height: min-content;
-  white-space: nowrap;
-  flex-direction: column;
-}
+
 .communityForm {
-  color: #000;
-  font-size: 28px;
-  font-weight: bold;
-  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 452px;
-  top: 124px;
   width: min-content;
   height: min-content;
   white-space: nowrap;
   flex-direction: column;
 }
-.feedback {
-  color: #000;
-  font-size: 24px;
-  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 156px;
-  top: 925px;
+
+.cultures {
   width: min-content;
   height: min-content;
   white-space: nowrap;
   flex-direction: column;
 }
+
+.stories {
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
 .fAQ {
-  color: #000;
-  font-size: 28px;
-  font-weight: bold;
-  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
   position: absolute;
   left: 1001px;
   top: 123px;
@@ -224,95 +164,79 @@
   white-space: nowrap;
   flex-direction: column;
 }
-.group1 {
+
+.bigChichenItza {
   position: absolute;
-  left: 1371px;
-  top: 840px;
-  width: 121px;
-  height: 121px;
-  overflow: visible;
-}
-.icon {
-  width: 100%;
-  height: 100%;
-}
-.instagramCircle {
-  position: absolute;
-  left: 39px;
-  top: 922px;
-  width: 37px;
-  height: 37px;
-  background-image:/* webpackIgnore: true */ url('assets/instagramCircle.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.chichenItza {
-  position: absolute;
-  left: 39px;
-  top: 25px;
-  width: 64px;
-  height: 59px;
-  background-image:/* webpackIgnore: true */ url('assets/chichenItza.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.chichenItza2 {
-  position: absolute;
-  left: 568px;
-  top: 314px;
-  width: 436px;
-  height: 394px;
+  left: 25%;
+  top: 25%;
+  width: 50%;
+  height: 50%;
   background-image:/* webpackIgnore: true */ url('assets/chichenItza2.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
+
 .historyRemix {
-  color: #000;
   font-size: 14px;
-  font-family: Indie Flower, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
   position: absolute;
-  left: 235px;
-  top: 222px;
+  left: 15%;
+  top: 25%;
   width: 96px;
-  height: 17px;
   justify-content: center;
   flex-direction: column;
 }
-.xboxR {
-  opacity: 0.8;
-  position: absolute;
-  left: 267px;
-  top: 41px;
-  width: 12px;
-  height: 10px;
-  background-image:/* webpackIgnore: true */ url('assets/xboxR.png');
+
+.instagramCircle {
+  background-image:/* webpackIgnore: true */ url('assets/instagramCircle.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  width: 35px;
+  margin: 0px 5px;
 }
-.chat {
-  position: absolute;
-  left: 1398px;
-  top: 856px;
-  width: 66px;
-  height: 90px;
-  background-image:/* webpackIgnore: true */ url('assets/chat.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
+
 .linkedIn {
-  position: absolute;
-  left: 95px;
-  top: 919px;
-  width: 42px;
-  height: 42px;
   background-image:/* webpackIgnore: true */ url('assets/linkedIn.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  width: 35px;
+  margin: 0px 5px;
+}
+
+.feedback {
+  font-size: 24px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+  padding: 2px 5px;
+  transform: translateY(-5px);
+  padding-top: 10px;
+}
+
+.group1 {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 100%;
+  width: 80px;
+  height: 80px;
+  overflow: visible;
+  z-index: 2;
+}
+
+.chat {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  background-image:/* webpackIgnore: true */ url('assets/chat.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 3;
 }

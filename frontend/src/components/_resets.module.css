@@ -19,7 +19,6 @@
 .clapyResets ul,
 .clapyResets ol {
   text-indent: 0;
-  padding-inline-start: 1.5em;
 }
 
 .clapyResets p:empty::before {
