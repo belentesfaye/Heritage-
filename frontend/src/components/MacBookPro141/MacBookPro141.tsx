@@ -20,6 +20,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
   const [isHeritgae, setHeritage] = useState(false);
   const [isCulture, setCulture] = useState(false);
   const [isStories, setStories] = useState(false);
+  const [isFAQ, setFAQ] = useState(false);
 
   //if hertiage is clicked, close all other boxes
   const toggleHeritage = () => {
@@ -31,6 +32,8 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setCommunityFormVisible(false);
     setCulture(false);
     setHeritage(true);
+    setStories(false);
+    setFAQ(false);
   };
 
   const toggleInfoBox = () => {
@@ -40,6 +43,10 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setChatBoxVisible(false);
     setHelpVisible(false);
     setCommunityFormVisible(false);
+    setCulture(false);
+    setHeritage(false);
+    setStories(false);
+    setFAQ(false);
   };
 
   const toggleAbout = () => {
@@ -48,8 +55,11 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setSignInVisible(false);
     setChatBoxVisible(false);
     setHelpVisible(false);
-    setCulture(false);
     setCommunityFormVisible(false);
+    setCulture(false);
+    setHeritage(false);
+    setStories(false);
+    setFAQ(false);
   };
 
   const toggleSignIn = () => {
@@ -60,6 +70,9 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setHelpVisible(false);
     setCommunityFormVisible(false);
     setCulture(false);
+    setHeritage(false);
+    setStories(false);
+    setFAQ(false);
   };
 
   const toggleChatBox = () => {
@@ -70,6 +83,9 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setHelpVisible(false);
     setCommunityFormVisible(false);
     setCulture(false);
+    setHeritage(false);
+    setStories(false);
+    setFAQ(false);
   };
 
   const toggleHelp = () => {
@@ -80,6 +96,9 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setHelpVisible(true);
     setCommunityFormVisible(false);
     setCulture(false);
+    setHeritage(false);
+    setStories(false);
+    setFAQ(false);
   };
 
   const toggleCommunityForm = () => {
@@ -90,6 +109,9 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setHelpVisible(false);
     setCommunityFormVisible(true);
     setCulture(false);
+    setHeritage(false);
+    setStories(false);
+    setFAQ(false);
   };
   const toggleCulture = () => {
     setInfoBoxVisible(false);
@@ -99,6 +121,9 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setHelpVisible(false);
     setCommunityFormVisible(false);
     setCulture(true);
+    setHeritage(false);
+    setStories(false);
+    setFAQ(false);
   }
   const toggleStories = () => {
     setInfoBoxVisible(false);
@@ -108,7 +133,21 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setHelpVisible(false);
     setCommunityFormVisible(false);
     setCulture(false);
+    setHeritage(false);
     setStories(true);
+    setFAQ(false);
+  }
+  const toggleFAQ = () => {
+    setInfoBoxVisible(false);
+    setAboutVisible(false);
+    setSignInVisible(false);
+    setChatBoxVisible(false);
+    setHelpVisible(false);
+    setCommunityFormVisible(false);
+    setCulture(false);
+    setHeritage(false);
+    setStories(false);
+    setFAQ(true);
   }
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
@@ -141,7 +180,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
       <div className={classes.cultures} onClick={toggleCulture}>Cultures</div>
       <div className={classes.communityForm} onClick={toggleCommunityForm}>Community Form</div>
       <div className={classes.feedback}>Feedback</div>
-      <div className={classes.fAQ}>FAQ</div>
+      <div className={classes.fAQ} onClick={toggleFAQ}>FAQ</div>
       <div className={classes.group1}>
         <Group1Icon className={classes.icon} />
       </div>
@@ -269,6 +308,35 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
           </div>
           </div>
         )}
+        {isFAQ && (
+          <div className={classes.helpBox}>
+          <div className={classes.fAQ3}>FAQ</div>
+          <div className={classes.general}>General</div>
+          <div className={classes.contentSharing}>Content Sharing</div>
+          <div className={classes.whatIsHeritageHubHowDoICreateA}>
+            <ul className={classes.list}>
+            <li>
+              <div className={classes.textBlock4}>What is HeritageHub?</div>
+            </li>
+            <li>
+              <div className={classes.textBlock5}>How do I create an account on HeritageHub?</div>
+            </li>
+            </ul>
+          </div>
+          <div className={classes.howCanIShareMyFamilyHistoryOnH}>
+            <ul className={classes.list2}>
+              <li>
+                <div className={classes.textBlock6}>How can I share my family history on HeritageHub?</div>
+              </li>
+              <li>
+                <div className={classes.textBlock7}>What type of content can I share on HeritageHub?</div>
+              </li>
+              <li>
+                <div className={classes.textBlock8}>How do I upload images and documents related to my family history?</div>
+              </li>
+            </ul>
+          </div>
+      </div>)}
       </div>
   );
 });
