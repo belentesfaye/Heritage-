@@ -3,7 +3,7 @@ import type { FC, JSXElementConstructor, ReactElement, ReactNode, ReactPortal } 
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import resets from '../_resets.module.css';
 import { Group1Icon } from './Group1Icon';
-import classes from './MacBookPro141.module.css';
+import classes from './HeritageHub.module.css';
 
 
 interface Props {
@@ -229,6 +229,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
             <div className={classes.chatBoxPage}>
             <div className={classes.chatBoxSubmit}></div>
             <div className={classes.gpt}></div>
+            <div className={classes.sendLetter}></div>
             <div className={classes.howCanIHelpYou}>How can I help you?</div>
             </div>)}
         {isHelpVisible && (
