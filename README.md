@@ -45,4 +45,4 @@ Before you begin, make sure you have Node.js installed on your machine. This inc
 
 ## Additional Information
 
-For more details on the project structure, features, and development guidelines, please refer to the specific documentation sections or files within the repository.
+This is prototype demo only, you need to click on the Hertiage on main page to close other boxes. 

@@ -4,6 +4,11 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import resets from '../_resets.module.css';
 import { Group1Icon } from './Group1Icon';
 import classes from './HeritageHub.module.css';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, User, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { MediaProvider } from './MediaContext';
+import { MediaUpload } from './MediaUpload';
+import { DisplayPosts } from './DisplayPosts';
+
 
 
 interface Props {
@@ -21,6 +26,57 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
   const [isCulture, setCulture] = useState(false);
   const [isStories, setStories] = useState(false);
   const [isFAQ, setFAQ] = useState(false);
+  const [isCommunityVisible, setCommunityVisible] = useState(false);
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [user, setUser] = useState<User | null>(null);
+  const [error, setError] = useState('');
+  const toggleCommunity = () => {
+    setCommunityVisible(!isCommunityVisible);
+  };
+  
+  const auth = getAuth();
+  
+  const handleSignUp = () => {
+      createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+              setUser(userCredential.user);
+              console.log('Account created and user signed in!');
+          })
+          .catch((error) => {
+              setError(error.message);
+              console.error('Error signing up:', error);
+          });
+  };
+  
+  const handleSignIn = () => {
+      signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+              setUser(userCredential.user);
+              console.log('User signed in!');
+          })
+          .catch((error) => {
+              setError(error.message);
+              console.error('Error signing in:', error);
+          });
+  };
+
+  const signInWithGoogle = () => {
+    const auth = getAuth();
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+        .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            console.log('Success', result);
+            // Handle navigation or user session setup here
+        }).catch((error) => {
+            // Handle Errors here.
+            console.error('Error during Google Sign In', error);
+        });
+};
+  
+
 
   //if hertiage is clicked, close all other boxes
   const toggleHeritage = () => {
@@ -149,6 +205,10 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setStories(false);
     setFAQ(true);
   }
+  const handleFormSubmit = (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+    handleSignIn(); // Assuming this function handles both sign-in and registration
+};
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
         {isInfoBoxVisible && (
@@ -206,7 +266,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
             <div className={classes.textBlock3}>Privacy</div>
           </div>
         )} 
-      {isSignInVisible && (
+      {/* {isSignInVisible && (
           <div className={`${resets.clapyResets} ${classes.root}`}>
           <div className={classes.rectangle2}>
           <div className={classes.centerContent}>
@@ -218,13 +278,57 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
           <div className={classes.username}>Username</div>
           <div className={classes.password}>Password</div>
           <div className={classes.signIn2}>Sign In</div>
-          <div className={classes.signInGoogle}>Sign in Google</div>
+          <div className={classes.signInGoogle} onClick={signInWithGoogle}>Sign in with Google</div>
           <div className={classes.resetPassword}>Reset Password</div>
           <div className={classes.google}></div>
           </div>
         </div>
         </div>
-        )}
+        )} */}
+{isSignInVisible && (
+    <div className={`${resets.clapyResets} ${classes.root}`}>
+        <form className={classes.formCenter} onSubmit={handleFormSubmit}> {/* Add form tag with onSubmit handler */}
+            <div className={classes.rectangle2}>
+                <div className={classes.centerContent}>
+                    <div className={classes.line4}></div>
+                    <div className={classes.rectangle5}></div>
+                    <div className={classes.rectangle3}></div>
+                    <div className={classes.rectangle6}></div>
+                    
+                    <div className={classes.rectangle3}>
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="Username"
+                            className={classes.usernameInput}
+                        />
+                    </div>
+                    {/* <div className={classes.username}>Username</div> */}
+                    
+                    <div className={classes.passwordbox}>
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            placeholder="Password"
+                            className={classes.passwordInput}
+                        />
+                    </div>
+                    {/* <div className={classes.password}>Password</div> */}
+
+                    <button type="submit" className={classes.signIn2}>Sign In</button>
+                    <button type="button" className={classes.signInGoogle} onClick={signInWithGoogle}>Sign in with Google</button>
+                    <div className={classes.resetPassword}>Reset Password</div>
+                    
+                    {error && <p className={`${classes.error} error`}>Error: {error}</p>}
+                </div>
+            </div>
+        </form>
+    </div>
+)}
+
+
         {isChatBoxVisible && (
             <div className={classes.chatBoxPage}>
             <div className={classes.chatBoxSubmit}></div>
@@ -246,7 +350,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
            <div className={classes.contactUs}>Contact Us</div>
            <div className={classes.search2}></div>
             </div>)}
-        {isCommunityFormVisible && (
+        {/* {isCommunityFormVisible && (
           <div className={classes.helpBox}>
           <div className={classes.multiMediaSelection}></div>
           <div className={classes.imageAdd}></div>
@@ -276,6 +380,12 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
             personal way! #FamilyHistory #WWIHeroes&quot;
           </div>
         </div>
+        )} */}
+        {isCommunityFormVisible && (
+          <MediaProvider>
+            <MediaUpload />
+            <DisplayPosts />
+          </MediaProvider>
         )}
         {isCulture && (
           <div className={classes.helpBox}>
