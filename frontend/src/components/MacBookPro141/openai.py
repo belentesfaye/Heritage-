@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key = ""
+openai.api_key = "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"
 
 def hello_world_openai():
     response = openai.Completion.create(

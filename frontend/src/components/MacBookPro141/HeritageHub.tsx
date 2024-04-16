@@ -8,11 +8,10 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, Us
 import { MediaProvider } from './MediaContext';
 import { MediaUpload } from './MediaUpload';
 import { DisplayPosts } from './DisplayPosts';
-
-
+import HeritageQuestions from './HeritageQuestions';
 
 interface Props {
-	className?: string;
+  className?: string;
 }
 /* @figmaId 1:3 */
 export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) {
@@ -246,7 +245,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
       </div>
       <div className={classes.instagramCircle}></div>
       <div className={classes.chichenItza}></div>
-      <div className={classes.chichenItza2}></div>
+      {/* <div className={classes.chichenItza2}></div> */}
       <div className={classes.historyRemix}>HistoryRemix</div>
       <div className={classes.xboxR}></div>
       <div className={classes.chat} onClick={toggleChatBox}></div>
@@ -330,12 +329,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
 
 
         {isChatBoxVisible && (
-            <div className={classes.chatBoxPage}>
-            <div className={classes.chatBoxSubmit}></div>
-            <div className={classes.gpt}></div>
-            <div className={classes.sendLetter}></div>
-            <div className={classes.howCanIHelpYou}>How can I help you?</div>
-            </div>)}
+           <HeritageQuestions />)}
         {isHelpVisible && (
           <div className={classes.helpBox}>
            <div className={classes.howCanWeHelp}>How can we help?</div>
@@ -350,43 +344,15 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
            <div className={classes.contactUs}>Contact Us</div>
            <div className={classes.search2}></div>
             </div>)}
-        {/* {isCommunityFormVisible && (
-          <div className={classes.helpBox}>
-          <div className={classes.multiMediaSelection}></div>
-          <div className={classes.imageAdd}></div>
-          <div className={classes.cinema}></div>
-          <div className={classes.chatCommunity}></div>
-          <div className={classes.addLink}></div>
-          <div className={classes.sMS}></div>
-          <div className={classes.craigUser}></div>
-          <div className={classes.beccaUser}></div>
-          <div className={classes.craigPotter}>Craig Potter</div>
-          <div className={classes.rebeccaLee}>Rebecca Lee</div>
-          <div className={classes.PotterMore12}>@potterMore12</div>
-          <div className={classes.BeccaLee}>@BeccaLee</div>
-          <div className={classes._6h}>6h</div>
-          <div className={classes._10h}>10h</div>
-          <div className={classes.fullStop}></div>
-          <div className={classes.fullStop2}></div>
-          <div className={classes.communityPost1}>
-            Thrilled to have traced my family back to the 18th century Scotland! 🏴 Discovered we were part of a small but
-            fierce clan in the Highlands. Planning a trip next year to walk where they walked. #AncestryAdventure
-            #ScotlandRoots
-          </div>
-          <div className={classes.line5}></div>
-          <div className={classes.communityPost2}>
-            &quot;📷 Just found this amazing photo of my great-grandfather in uniform during WWI. Never knew much about him
-            until I started digging into our family archives. It&#39;s incredible to connect with your past in such a
-            personal way! #FamilyHistory #WWIHeroes&quot;
-          </div>
-        </div>
-        )} */}
-        {isCommunityFormVisible && (
-          <MediaProvider>
+            {isCommunityFormVisible && (
+    <div>
+        <MediaProvider>
             <MediaUpload />
             <DisplayPosts />
-          </MediaProvider>
-        )}
+        </MediaProvider>
+    </div>
+)}
+
         {isCulture && (
           <div className={classes.helpBox}>
           <div className={classes.culturesTitle }> Culture </div>
