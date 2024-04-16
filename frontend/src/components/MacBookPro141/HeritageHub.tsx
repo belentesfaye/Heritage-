@@ -21,6 +21,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
   const [isCulture, setCulture] = useState(false);
   const [isStories, setStories] = useState(false);
   const [isFAQ, setFAQ] = useState(false);
+  const [isDiscussion, setDiscussion] = useState(false);
 
   //if hertiage is clicked, close all other boxes
   const toggleHeritage = () => {
@@ -34,6 +35,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setHeritage(true);
     setStories(false);
     setFAQ(false);
+    setDiscussion(false);
   };
 
   const toggleInfoBox = () => {
@@ -47,6 +49,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setHeritage(false);
     setStories(false);
     setFAQ(false);
+    setDiscussion(false);
   };
 
   const toggleAbout = () => {
@@ -60,6 +63,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setHeritage(false);
     setStories(false);
     setFAQ(false);
+    setDiscussion(false);
   };
 
   const toggleSignIn = () => {
@@ -73,6 +77,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setHeritage(false);
     setStories(false);
     setFAQ(false);
+    setDiscussion(false);
   };
 
   const toggleChatBox = () => {
@@ -86,6 +91,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setHeritage(false);
     setStories(false);
     setFAQ(false);
+    setDiscussion(false);
   };
 
   const toggleHelp = () => {
@@ -99,6 +105,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setHeritage(false);
     setStories(false);
     setFAQ(false);
+    setDiscussion(false);
   };
 
   const toggleCommunityForm = () => {
@@ -112,6 +119,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setHeritage(false);
     setStories(false);
     setFAQ(false);
+    setDiscussion(false);
   };
   const toggleCulture = () => {
     setInfoBoxVisible(false);
@@ -124,6 +132,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setHeritage(false);
     setStories(false);
     setFAQ(false);
+    setDiscussion(false);
   }
   const toggleStories = () => {
     setInfoBoxVisible(false);
@@ -136,6 +145,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setHeritage(false);
     setStories(true);
     setFAQ(false);
+    setDiscussion(false);
   }
   const toggleFAQ = () => {
     setInfoBoxVisible(false);
@@ -148,7 +158,22 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
     setHeritage(false);
     setStories(false);
     setFAQ(true);
+    setDiscussion(false);
   }
+  const toggleDiscussion = () => {
+    setInfoBoxVisible(false);
+    setAboutVisible(false);
+    setSignInVisible(false);
+    setChatBoxVisible(false);
+    setHelpVisible(false);
+    setCommunityFormVisible(false);
+    setCulture(false);
+    setHeritage(false);
+    setStories(false);
+    setFAQ(false);
+    setDiscussion(true);
+  }
+
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
         {isInfoBoxVisible && (
@@ -253,7 +278,7 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
           <div className={classes.cinema}></div>
           <div className={classes.chatCommunity}></div>
           <div className={classes.addLink}></div>
-          <div className={classes.sMS}></div>
+          <div className={classes.sMS} onClick={toggleDiscussion}></div>
           <div className={classes.craigUser}></div>
           <div className={classes.beccaUser}></div>
           <div className={classes.craigPotter}>Craig Potter</div>
@@ -276,6 +301,29 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
             personal way! #FamilyHistory #WWIHeroes&quot;
           </div>
         </div>
+        )}
+        {isDiscussion && (
+          <div className={classes.helpBox}>
+            <div className={classes.craigPotter}>
+              <div className={classes.craigPotter2Name}>Craig Potter</div>
+              <div className={classes.craigUser2}/>
+              <div className={classes.PotterMore12copy}>@potterMore12</div>
+              <div className={classes.fullStop3}/>
+              <div className={classes._6copy}>6h</div>
+              <div className={classes.communityPost3}>Thrilled to have traced my family back to the 18th century Scotland! 🏴 Discovered we were part of a small but
+            fierce clan in the Highlands. Planning a trip next year to walk where they walked. #AncestryAdventure
+            #ScotlandRoots</div>
+              <div className={classes.line6}></div>
+            </div>
+            <div className={classes.textArea}>write a message...</div>
+            <div className={classes.discussionButtons}>
+              <div className={classes.addLink}></div>
+              <div className={classes.sMS}></div>
+              <div className={classes.imageAdd}></div>
+              <div className={classes.cinema}></div>
+              <div className={classes.discussionSubmit}>Submit</div>
+            </div>
+          </div>
         )}
         {isCulture && (
           <div className={classes.helpBox}>

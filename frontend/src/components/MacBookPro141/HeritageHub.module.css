@@ -1728,3 +1728,105 @@ box-shadow: 0px 4px 4px 0px #00000040;
   white-space: nowrap;
   flex-direction: column;
 }
+
+.craigPotter2Name {
+  position: absolute;
+  width: 173px;
+  height: 46px;
+  transform: translate(-50px, -175px);
+}
+
+.craigUser2 {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  transform: translate(-150px, -175px);
+  background-image:/* webpackIgnore: true */ url('assets/maleUser.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.PotterMore12copy {
+  color: #999898;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  width: 206px;
+  height: 46px;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate(115px, -177px);
+}
+
+.fullStop3 {
+  position: absolute;
+  width: 27px;
+  height: 30px;
+  background-image:/* webpackIgnore: true */ url('assets/fullStop.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translate(290px, -175px);
+}
+._6copy {
+  color: #999898;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  width: 40px;
+  height: 46px;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate(330px, -177px);
+}
+.communityPost3 {
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Gowun Batang, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  width: 1010px;
+  height: 102px;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate(-50px, -100px);
+}
+.line6 {
+  position: absolute;
+  width: 859px;
+  border-bottom: solid 1px #000;
+}
+.textArea {
+  position: absolute;
+  width: 800px;
+  height: 400px;
+  overflow: visible;
+  background-color: #48742c;
+  transform: translate(225px, 280px);
+  opacity: 50%;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.discussionButtons {
+  transform: translate(350px, 770px);
+  scale: 50%;
+}
+.discussionSubmit {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  overflow: visible;
+  background-color: #51810c;
+  transform: translate(1350px, 100px);
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 50px;
+  justify-content: center;
+  color: white;
+}
