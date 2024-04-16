@@ -12,11 +12,13 @@ export const MediaUpload: React.FC = () => {
 
 
     const handleSubmit = (event: React.FormEvent) => {
-        event.preventDefault();
+        event.preventDefault(); // Prevent the form from causing a page reload
+        if (!caption.trim() && !url) return; // Prevent adding empty posts
+    
         const newPost: MediaPost = { id: Date.now().toString(), type, url, caption };
         addPost(newPost);
-        setUrl('');
-        setCaption('');
+        setUrl(''); // Reset URL
+        setCaption(''); // Reset caption
     };
 
     const handleFileInput = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,8 +38,8 @@ export const MediaUpload: React.FC = () => {
     };
 
     return (
-        <div >
-            {/* <form onSubmit={handleSubmit} className={classes.formInsideRectangle10}>
+        <div className={classes.rectangle10}>
+            <form onSubmit={handleSubmit} className={classes.formInsideRectangle10}>
                 <textarea
                     value={caption}
                     onChange={e => setCaption(e.target.value)}
@@ -54,7 +56,7 @@ export const MediaUpload: React.FC = () => {
                     />
                 </div>
                 <button type="submit" className={classes.submitPost}>Post</button>
-            </form> */}
+            </form>
         </div>
     );
 };

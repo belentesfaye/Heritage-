@@ -14,14 +14,10 @@ interface Props {
 
 export const App: FC<Props> = memo(function App(props = {}) {
   return (
-    <MediaProvider> {/* Wrap everything in MediaProvider to manage media posts */}
+  
       <div className={`${resets.clapyResets} ${classes.root}`}>
         <MacBookPro141 />
-        <SignInPage />
-        <DisplayPosts /> {/* Component for displaying media posts */}
-        <MediaUpload /> {/* Component for uploading media */}
-        
+      
       </div>
-    </MediaProvider>
   );
 });

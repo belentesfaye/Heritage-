@@ -347,8 +347,9 @@ export const MacBookPro141: FC<Props> = memo(function MacBookPro141(props = {}) 
             {isCommunityFormVisible && (
     <div>
         <MediaProvider>
+        <DisplayPosts />
             <MediaUpload />
-            <DisplayPosts />
+            
         </MediaProvider>
     </div>
 )}

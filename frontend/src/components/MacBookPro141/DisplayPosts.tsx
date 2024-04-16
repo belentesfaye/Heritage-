@@ -4,23 +4,25 @@ import classes from './HeritageHub.module.css';
 
 export const DisplayPosts: React.FC = () => {
     const { posts } = useContext(MediaContext);
-  
-    return (
-      <>
-        {posts.map(post => (
-          <div key={post.id} className={classes.helpBox}>
-            {post.type === 'link' ? (
-              <a href={post.url} target="_blank" rel="noopener noreferrer">{post.caption}</a>
-            ) : (
-              <div>
-                <img src={post.url} alt={post.caption} />
-                <p>{post.caption}</p>
-              </div>
-            )}
-          </div>
-        ))}
-      </>
-    );
-  };
 
-export {}; 
+    return (
+        <div className={classes.postBox}>
+            {posts.map(post => (
+                <div key={post.id} className={classes.communityPost1}>
+                    {post.type === 'link' ? (
+                        <a href={post.url} target="_blank" rel="noopener noreferrer">{post.caption}</a>
+                    ) : (
+                        <div>
+                            <p>{post.caption}</p>
+                            <img src={post.url} alt={post.caption} className={classes.postImage} />
+                        </div>
+                    )}
+                    
+                </div>
+            ))}
+        </div>
+    );
+};
+
+
+export {};
